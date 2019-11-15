@@ -1,0 +1,28 @@
+Explain what a token is used for.
+A token is created by a web server and given to a web client to signify that the user of the web client is authenticated by the web server. This means that the web server has verified that the user is who he claims to be. The token is a random sequence of characters that is unique to the user and should be supplied by the client to the web server whenever the client makes subsequent access requests to the server on behalf of the user.
+
+
+
+What steps can you take in your web apps to keep your data secure?
+Step1: Secured data should be kept behind protected routes in the app by using React Router. Protected paths should only be accesible by the user once the user has completed authentication with the server and received a token from the server. 
+
+Step2: The token received by the server should be stored in the browsers sessionStorage and not the localStorage. This is because the localStorage presists for an indefinite amount of time while the sessionStorage lasts for the browser session. Storing sensitive security materials like the token on long lasting storage is not recommeded for good security.
+
+Step3: Use https (and not http) to communicate with the webserver. This ensures that whatever information is transferred between the web server and the web client is securely encrypted and safe from eavesdropping by the computers that carry the information between the client and server. This includes the initial username and password that the web client sends to the web server to verify the user.
+
+
+
+Describe how web servers work.
+Web servers are the computers that run programs, or the programs themselves that:
+(a) access information available to the web server and transfer it to a web client so that the user of the web client can access the information
+(b) receive information from a web client (this information was provided to the web client by the user of the web client) and store it in an appropriate location
+(c) before performing any transactions with a web client, it authenticates the user on the web client, i.e. verifies who he claims to be by asking for username and password.
+(d) allow certain information sharing in certain directions (into or out of the web server) depending on what information the particular user is authorized to give or receive from the web server. 
+
+
+
+Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+The "C" stans for create and is mapped to the POST HTTP method.
+The "R" stans for read and is mapped to the GET HTTP method.
+The "U" stans for update and is mapped to the PUT HTTP method.
+The "D" stans for delete and is mapped to the DELETE HTTP method.
