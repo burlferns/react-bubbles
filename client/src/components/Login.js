@@ -76,10 +76,10 @@ const Login = () => {
       delay(delay_time); //This is artificail delay time so that we can see different states
       if(err.response && err.response.status===403) {
         const errMsg = "You have entered an invalid username and/or password";
-        setLoginData({...loginData,formState:3,errMsg,errMsg});
+        setLoginData({...loginData,formState:3,errMsg:errMsg});
       } else {
         const errMsg = ""+err;
-        setLoginData({...loginData,formState:3,errMsg,errMsg});
+        setLoginData({...loginData,formState:3,errMsg:errMsg});
       }
     }); 
   };
