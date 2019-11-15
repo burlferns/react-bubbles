@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
+import { Link } from "react-router-dom";
 import './Login.css';
 
 import delay from '../modules/delay';
@@ -120,6 +121,8 @@ const Login = () => {
         <button className="loginSubmitBtn" type="submit">Login</button>
 
         <h3 className="formStatus">{formStatus(loginData.formState,loginData.errMsg)}</h3>
+
+        <Link to="/BubblePage">BubblePage</Link>
 
       </form>
 
