@@ -1,0 +1,37 @@
+.loginContainer {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleHeader {
+  width:fit-content;
+  margin:0;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formInputContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-area {
+  width:200px;
+  font-size:16px;
+}
+
+.loginSubmitBtn {
+  margin-top:20px;
+  margin-bottom:20px;
+  font-size:16px;
+}
